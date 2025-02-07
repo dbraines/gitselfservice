@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuideIT Self-Service Portal</title>
     <style>
-        /* General body styling */
+        /* General body styling with gradient background */
         body {
             font-family: Arial, sans-serif;
-            background-color: #003E56; /* Dark blue background */
+            background: linear-gradient(135deg, #003E56, #005A7A); /* Gradient background */
             color: #FFFFFF; /* White text */
             margin: 0;
             padding: 0;
             text-align: center;
+            height: 100vh; /* Full-screen height */
         }
 
         /* Header styling */
         header {
-            background-color: #005A7A; /* Lighter blue for contrast */
+            background-color: rgba(0, 62, 86, 0.9); /* Slightly transparent dark blue */
             padding: 20px;
+            border-bottom: 2px solid #005A7A; /* Accent border */
         }
 
         header img {
-            width: 200px; /* Adjust logo size */
+            width: 200px; /* Logo size */
             height: auto;
         }
 
         h1 {
-            font-size: 24px;
-            margin-top: 20px;
+            font-size: 28px;
+            margin-top: 10px;
         }
 
         /* Button container */
@@ -37,43 +39,54 @@
             max-width: 300px;
         }
 
-        /* Buttons styling */
-        .button-container button {
+        /* Buttons with gradient styling */
+        .button-container a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
             width: 100%;
             padding: 15px;
             margin: 10px 0;
-            background-color: #FFFFFF; /* White button background */
-            color: #003E56; /* Button text color */
+            background: linear-gradient(135deg, #005A7A, #003E56); /* Gradient button background */
+            color: #FFFFFF; /* White text */
             font-size: 16px;
             font-weight: bold;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
         }
 
-        .button-container button:hover {
-            background-color: #005A7A; /* Slightly darker on hover */
-            color: #FFFFFF;
+        .button-container a:hover {
+            background: linear-gradient(135deg, #003E56, #005A7A); /* Reverse gradient on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
             transform: scale(1.05); /* Slight zoom effect */
         }
 
-        .button-container button:active {
+        .button-container a:active {
             transform: scale(0.95); /* Slight shrink on click */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/guideit-logo.png" alt="Guide IT Logo">
+        <img src="images/gitlogo.png" alt="Guide IT Logo">
         <h1>Welcome to GuideIT Self-Service Portal</h1>
     </header>
     <div class="button-container">
-        <button>1. Reset Password</button>
-        <button>2. Install Software</button>
-        <button>3. Check Device Health</button>
-        <button>4. Submit a Ticket</button>
-        <button>5. Access Knowledge Base</button>
+        <!-- Reset Password -->
+        <a href="https://sspr.guideit.com" target="_blank">1. Reset Password</a>
+        <!-- Install Software -->
+        <a href="#">2. Install Software</a>
+        <!-- Check Device Health -->
+        <a href="#">3. Check Device Health</a>
+        <!-- Submit a Ticket -->
+        <a href="mailto:support@guideit.com?subject=Support Request">4. Submit a Ticket</a>
+        <!-- Access Knowledge Base -->
+        <a href="#">5. Access Knowledge Base</a>
     </div>
 </body>
 </html>
+
