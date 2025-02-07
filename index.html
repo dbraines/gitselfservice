@@ -3,49 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self Service Portal</title>
+    <title>GuideIT Self-Service Portal</title>
     <style>
-        /* Styling for the page */
+        /* General body styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #005A7A; /* Logo background color */
-            color: #FFFFFF; /* White text color */
+            background-color: #003E56; /* Dark blue background */
+            color: #FFFFFF; /* White text */
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
+        /* Header styling */
         header {
-            text-align: center;
+            background-color: #005A7A; /* Lighter blue for contrast */
             padding: 20px;
-            background-color: #003E56; /* Slightly darker blue for the header */
         }
 
         header img {
-            width: 200px;
+            width: 200px; /* Adjust logo size */
             height: auto;
         }
 
-        h1, p {
-            text-align: center;
-        }
-
         h1 {
-            color: #FFFFFF; /* Match text with logo's white text */
+            font-size: 24px;
+            margin-top: 20px;
         }
 
-        p {
-            color: #D9D9D9; /* Light gray accent color */
-            font-size: 18px;
-            margin: 20px auto;
-            max-width: 800px;
+        /* Button container */
+        .button-container {
+            margin: 50px auto;
+            max-width: 300px;
+        }
+
+        /* Buttons styling */
+        .button-container button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #FFFFFF; /* White button background */
+            color: #003E56; /* Button text color */
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button-container button:hover {
+            background-color: #005A7A; /* Slightly darker on hover */
+            color: #FFFFFF;
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        .button-container button:active {
+            transform: scale(0.95); /* Slight shrink on click */
         }
     </style>
 </head>
 <body>
     <header>
         <img src="images/guideit-logo.png" alt="Guide IT Logo">
+        <h1>Welcome to GuideIT Self-Service Portal</h1>
     </header>
-    <h1>Welcome to the Self Service Portal</h1>
-    <p>This portal is designed with the Guide IT color scheme for a cohesive and professional look.</p>
+    <div class="button-container">
+        <button>1. Reset Password</button>
+        <button>2. Install Software</button>
+        <button>3. Check Device Health</button>
+        <button>4. Submit a Ticket</button>
+        <button>5. Access Knowledge Base</button>
+    </div>
 </body>
 </html>
