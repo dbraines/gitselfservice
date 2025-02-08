@@ -1,39 +1,156 @@
-<style>
-    /* General body styling with gradient background */
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #002D44, #004761); /* Gradient matching logo */
-        color: #FFFFFF; /* White text */
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        height: 100vh; /* Full-screen height */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuideIT Self-Service Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #002D44, #004761);
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Ensure elements are centered vertically */
+        }
 
-    /* Header styling */
-    header {
-        background: linear-gradient(to bottom, #002D44, #004761); /* Match gradient */
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-        border-bottom: 2px solid #002D44; /* Accent border */
-    }
+        header {
+            background: linear-gradient(to bottom, #002D44, #004761);
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            border-bottom: 2px solid #002D44;
+        }
 
-    header img {
-        width: 200px; /* Logo size */
-        height: auto;
-        margin-bottom: 10px;
-    }
+        header img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
 
-    h1 {
-        font-size: 28px;
-        margin: 0;
-        color: #FFFFFF;
-    }
-</style>
+        h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #FFFFFF;
+        }
 
+        .button-container {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
+        .button-container a, .button-container button {
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(to right, #005A7A, #003E56);
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button-container a:hover, .button-container button:hover {
+            background: linear-gradient(to right, #003E56, #005A7A);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        .button-container a:active, .button-container button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #dropdown-container {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #dropdown-container select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: #FFFFFF;
+            color: #002D44;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #dropdown-container button {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdown-container');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function installSoftware() {
+            const dropdown = document.getElementById('softwareDropdown');
+            const selectedValue = dropdown.value;
+
+            if (selectedValue) {
+                alert(`Installing: ${dropdown.options[dropdown.selectedIndex].text}`);
+                window.open(selectedValue, '_blank');
+            } else {
+                alert('Please select software to install.');
+            }
+        }
+
+        function checkDeviceHealth() {
+            const healthCheckResult = `
+Device Health Check:
+- Disk Space: OK
+- Memory Usage: OK
+- Network Connectivity: OK
+`;
+            alert(healthCheckResult);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/gitlogo.png" alt="Guide IT Logo">
+        <h1>Welcome to GuideIT Self-Service Portal</h1>
+    </header>
+    <div class="button-container">
+        <!-- Reset Password -->
+        <a href="https://sspr.guideit.com" target="_blank">1. Reset Password</a>
+        
+        <!-- Install Software -->
+        <button onclick="toggleDropdown()">2. Install Software</button>
+        <div id="dropdown-container">
+            <select id="softwareDropdown">
+                <option value="">Select Software</option>
+                <option value="software/AdobeAcrobat.msi">Adobe Acrobat</option>
+            </select>
+            <button onclick="installSoftware()">Install Selected Software</button>
+        </div>
+
+        <!-- Check Device Health -->
+        <a href="#" onclick="checkDeviceHealth()">3. Check Device Health</a>
+        
+        <!-- Submit a Ticket -->
+        <a href="mailto:support@guideit.com?subject=Support Request">4. Submit a Ticket</a>
+
+        <!-- Access Knowledge Base -->
+        <a href="https://kb.guideit.com" target="_blank">5. Access Knowledge Base</a>
+    </div>
+</body>
+</html>
