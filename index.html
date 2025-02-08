@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuideIT Self-Service Portal</title>
     <style>
-        /* General body styling with gradient background */
+        /* General body styling with smooth gradient background */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #003E56, #005A7A); /* Gradient background */
+            background: linear-gradient(to bottom, #003E56, #005A7A); /* Top-to-bottom gradient */
             color: #FFFFFF; /* White text */
             margin: 0;
             padding: 0;
@@ -16,11 +16,11 @@
             height: 100vh; /* Full-screen height */
         }
 
-        /* Header styling */
+        /* Header styling with matching gradient */
         header {
-            background-color: rgba(0, 62, 86, 0.9); /* Slightly transparent dark blue */
+            background: linear-gradient(to bottom, #005A7A, #003E56); /* Reverse gradient for header */
             padding: 20px;
-            border-bottom: 2px solid #005A7A; /* Accent border */
+            border-bottom: 2px solid #003E56; /* Accent border */
         }
 
         header img {
@@ -47,7 +47,7 @@
             width: 100%;
             padding: 15px;
             margin: 10px 0;
-            background: linear-gradient(135deg, #005A7A, #003E56); /* Gradient button background */
+            background: linear-gradient(to right, #005A7A, #003E56); /* Horizontal gradient */
             color: #FFFFFF; /* White text */
             font-size: 16px;
             font-weight: bold;
@@ -59,7 +59,7 @@
         }
 
         .button-container a:hover {
-            background: linear-gradient(135deg, #003E56, #005A7A); /* Reverse gradient on hover */
+            background: linear-gradient(to right, #003E56, #005A7A); /* Reverse gradient on hover */
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
             transform: scale(1.05); /* Slight zoom effect */
         }
@@ -89,4 +89,3 @@
     </div>
 </body>
 </html>
-
