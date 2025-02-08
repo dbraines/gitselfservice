@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuideIT Self-Service Portal</title>
     <style>
-        /* General body styling with smooth gradient background */
+        /* General body styling with gradient background */
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #003E56, #005A7A); /* Top-to-bottom gradient */
@@ -79,14 +79,40 @@
         <!-- Reset Password -->
         <a href="https://sspr.guideit.com" target="_blank">1. Reset Password</a>
         <!-- Install Software -->
-        <a href="#">2. Install Software</a>
+        <a href="#" onclick="installSoftware()">2. Install Software</a>
         <!-- Check Device Health -->
-        <a href="#">3. Check Device Health</a>
+        <a href="#" onclick="checkDeviceHealth()">3. Check Device Health</a>
         <!-- Submit a Ticket -->
-        <a href="mailto:support@guideit.com?subject=Support Request">4. Submit a Ticket</a>
+        <a href="#" onclick="submitTicket()">4. Submit a Ticket</a>
         <!-- Access Knowledge Base -->
-        <a href="#">5. Access Knowledge Base</a>
+        <a href="https://kb.guideit.com" target="_blank">5. Access Knowledge Base</a>
     </div>
+
+    <script>
+        // Function to install software
+        function installSoftware() {
+            alert("Opening the software catalog for installation...");
+        }
+
+        // Function to check device health
+        function checkDeviceHealth() {
+            const healthCheckResult = `
+Device Health Check:
+- Disk Space: OK
+- Memory Usage: OK
+- Network Connectivity: OK
+`;
+            alert(healthCheckResult);
+        }
+
+        // Function to submit a ticket
+        function submitTicket() {
+            const emailAddress = "support@guideit.com";
+            const subject = encodeURIComponent("IT Support Request");
+            const body = encodeURIComponent("Please describe your issue here...");
+            const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>
-
