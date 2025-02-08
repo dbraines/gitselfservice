@@ -1,34 +1,118 @@
-<style>
-    /* General body styling with gradient background */
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #003E56, #005A7A); /* Top-to-bottom gradient */
-        color: #FFFFFF; /* White text */
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        height: 100vh; /* Full-screen height */
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuideIT Self-Service Portal</title>
+    <style>
+        /* General body styling with gradient background */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #003E56, #005A7A); /* Top-to-bottom gradient */
+            color: #FFFFFF; /* White text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            height: 100vh; /* Full-screen height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    /* Header styling with matching gradient */
-    header {
-        background: linear-gradient(to bottom, #00456A, #003655); /* Adjusted gradient closer to logo */
-        padding: 20px;
-        border-bottom: 2px solid #003E56; /* Accent border */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        /* Header styling */
+        header {
+            background: linear-gradient(to bottom, #005A7A, #003E56); /* Gradient header */
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 2px solid #003E56;
+            text-align: center;
+        }
 
-    header img {
-        width: 250px; /* Adjust logo size */
-        height: auto;
-        margin-bottom: 10px;
-    }
+        header img {
+            width: 200px; /* Adjust logo size */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
-    h1 {
-        font-size: 24px;
-        margin: 0;
-        color: #FFFFFF;
-    }
-</style>
+        h1 {
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        /* Button container */
+        .button-container {
+            margin: 30px auto;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between buttons */
+        }
+
+        /* Buttons with gradient styling */
+        .button-container a {
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(to right, #005A7A, #003E56); /* Horizontal gradient */
+            color: #FFFFFF; /* White text */
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button-container a:hover {
+            background: linear-gradient(to right, #003E56, #005A7A); /* Reverse gradient on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        .button-container a:active {
+            transform: scale(0.95); /* Slight shrink on click */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/gitlogo.png" alt="Guide IT Logo">
+        <h1>Welcome to GuideIT Self-Service Portal</h1>
+    </header>
+    <div class="button-container">
+        <!-- Reset Password -->
+        <a href="https://sspr.guideit.com" target="_blank">1. Reset Password</a>
+        <!-- Install Software -->
+        <a href="#" onclick="installSoftware()">2. Install Software</a>
+        <!-- Check Device Health -->
+        <a href="#" onclick="checkDeviceHealth()">3. Check Device Health</a>
+        <!-- Submit a Ticket -->
+        <a href="mailto:support@guideit.com?subject=Support Request">4. Submit a Ticket</a>
+        <!-- Access Knowledge Base -->
+        <a href="https://kb.guideit.com" target="_blank">5. Access Knowledge Base</a>
+    </div>
+
+    <script>
+        // Function to install software
+        function installSoftware() {
+            alert("Opening the software catalog for installation...");
+        }
+
+        // Function to check device health
+        function checkDeviceHealth() {
+            const healthCheckResult = `
+Device Health Check:
+- Disk Space: OK
+- Memory Usage: OK
+- Network Connectivity: OK
+`;
+            alert(healthCheckResult);
+        }
+    </script>
+</body>
+</html>
+
